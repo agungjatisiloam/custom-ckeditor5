@@ -10,6 +10,8 @@ import AutoLink from '@ckeditor/ckeditor5-link/src/autolink.js';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
@@ -30,6 +32,7 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist.js';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice.js';
@@ -50,6 +53,8 @@ Editor.builtinPlugins = [
 	Base64UploadAdapter,
 	BlockQuote,
 	Bold,
+	Underline,
+	Strikethrough,
 	CloudServices,
 	Essentials,
 	FontColor,
@@ -70,6 +75,7 @@ Editor.builtinPlugins = [
 	Link,
 	LinkImage,
 	List,
+	TodoList,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
@@ -90,10 +96,13 @@ Editor.defaultConfig = {
 			'fontFamily',
 			'fontSize',
 			'bold',
+			'underline',
+			'strikethrough',
 			'italic',
 			'link',
 			'bulletedList',
 			'numberedList',
+			'todoList',
 			'|',
 			'outdent',
 			'indent',
